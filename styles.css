@@ -1,10 +1,12 @@
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 #title {
-  background-color: #ff4c68;
+  background-color: #0d1b2a;
   color: #fff;
 }
 
@@ -22,15 +24,14 @@ body {
   padding: 0 18px;
 }
 
-.titel-text {
+.title-text {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.5;
 }
 
-.titel-image {
-  width: 60%;
-  transform: rotate(25deg);
+.title-image {
+  width: 80%;
 }
 
 .download-button {
@@ -47,17 +48,17 @@ body {
 }
 
 .icon {
-  color: #ef8172;
+  color: #0d6efd;
   margin-bottom: 1rem;
 }
 
 .icon:hover {
-  color: #ff4c68;
+  color: #0b5ed7;
 }
 
 #testimonials {
-  background-color: #ef8172;
-  color: #fff;
+  background-color: #e9ecef;
+  color: #333;
 }
 
 .carousel-item {
@@ -70,26 +71,23 @@ body {
   margin: 20px;
 }
 
-#press {
-  background-color: #ef8172;
-  padding-bottom: 3%;
-}
-
-.press-logo {
-  width: 15%;
-  margin: 20px 20px 50px;
-}
-
-#pricing {
+#deals {
   padding: 100px;
 }
 
 #cta {
-  background-color: #ff4c68;
+  background-color: #0d1b2a;
   color: #fff;
   padding: 7% 15%;
 }
 
 #footer {
   padding: 7% 15%;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.affiliate-disclaimer {
+  font-size: 0.8rem;
+  color: #666;
 }
