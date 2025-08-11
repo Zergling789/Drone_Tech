@@ -42,6 +42,19 @@ body {
   padding: 7% 15%;
 }
 
+#blog {
+  padding: 7% 15%;
+}
+
+#blog .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+#blog .card-title {
+  font-weight: 700;
+}
+
 .feature-box {
   text-align: center;
   padding: 4.5%;
