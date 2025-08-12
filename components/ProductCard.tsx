@@ -8,8 +8,8 @@ interface Props {
     name: string;
     slug: string;
     images: string[];
-    price?: number;
-    rating?: number;
+    price?: number | null;
+    rating?: number | null;
   };
 }
 
@@ -22,8 +22,8 @@ export default function ProductCard({ product }: Props) {
       <h3 className="text-lg font-semibold mt-2">
         <Link href={`/products/${product.slug}`}>{product.name}</Link>
       </h3>
-      {product.rating && <RatingStars rating={product.rating} />}
-      {product.price && <PriceTag price={product.price} />}
+      {product.rating != null && <RatingStars rating={product.rating} />}
+      {product.price != null && <PriceTag price={product.price} />}
     </div>
   );
 }

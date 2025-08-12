@@ -98,7 +98,7 @@ async function main() {
         slug: p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
         content: `<p>${p.title} Inhalt...</p>`,
         status: 'PUBLISHED',
-        authorId: admin.id,
+        author: { connect: { id: admin.id } },
         category: { connect: { name: p.category } },
         publishedAt: new Date(),
       },
@@ -106,9 +106,10 @@ async function main() {
   }
 
   await prisma.comparison.upsert({
-    where: { title: 'Beste Drohnen 2025: Einsteiger bis Pro' },
+    where: { id: 'comparison-1' },
     update: {},
     create: {
+      id: 'comparison-1',
       title: 'Beste Drohnen 2025: Einsteiger bis Pro',
       products: { connect: products.map((p) => ({ slug: p.slug })) },
       verdict: 'Alle Drohnen getestet',
