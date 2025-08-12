@@ -5,7 +5,7 @@ import { DOMAIN } from '@/lib/config';
 export async function GET() {
   const posts = await prisma.post.findMany({ where: { status: 'PUBLISHED' }, orderBy: { publishedAt: 'desc' } });
   const items = posts
-    .map((p) => `
+    .map((p: any) => `
       <item>
         <title>${p.title}</title>
         <link>${DOMAIN}/posts/${p.slug}</link>
