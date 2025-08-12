@@ -26,4 +26,4 @@ Diese Next.js 14 Anwendung dient als Ausgangspunkt für einen Drohnen-Blog mit A
 
 ## Deployment
 
-Vercel für Web, Postgres z.B. auf Neon. ENV-Variablen entsprechend setzen.
+Vercel für Web, Postgres z.B. über Supabase. ENV-Variablen entsprechend setzen.
