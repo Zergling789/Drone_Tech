@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await prisma.post.findMany({ where: { status: 'PUBLISHED' } });
-  const pages = posts.map((p) => ({ url: `${DOMAIN}/posts/${p.slug}`, lastModified: p.updatedAt }));
+  const pages = posts.map((p: any) => ({ url: `${DOMAIN}/posts/${p.slug}`, lastModified: p.updatedAt }));
   return [
     { url: DOMAIN, lastModified: new Date() },
     ...pages,

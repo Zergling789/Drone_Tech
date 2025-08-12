@@ -12,7 +12,7 @@ export default async function Home() {
     <main className="mx-auto max-w-4xl p-4">
       <h1 className="text-3xl font-bold mb-4">Neueste Artikel</h1>
       <ul className="space-y-4">
-        {posts.map((post) => (
+        {posts.map((post: any) => (
           <li key={post.id} className="border-b pb-2">
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </li>
